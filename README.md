@@ -19,32 +19,51 @@ demo mode.
 
 ## Setup
 
-Download Arduino IDE version 1.6.7 from:
+Assemble the arduino by putting the BlinkM in place as shown here:
+
+* https://jimmyg.org/blog/2009/arduino/IMG_8003.jpg
+
+(You don't need the Ethernet shield for the demo, the BlinkM just goes in the
+equivalent holes below)
+
+Now download Arduino IDE version 1.6.7 from:
 
 * https://www.arduino.cc/en/Main/Software
 
-Create a new project called `tea-light`:
+Tip: On Mac OS X, you might need to run it from Downloads, and right click and
+choose Open to accept that it isn't verified first.
 
-Checkout the the latest BlinkM code from here:
+You'll need to git repos. First get the tea-light code:
+
+~~~
+git clone https://github.com/tea-light/tea-light.git
+~~~
+
+Then checkout the the latest BlinkM code from here:
 
 ~~~
 git clone https://github.com/todbot/BlinkM-Examples.git
 ~~~
 
+Create a new project called `tea-light` by choosing `File -> New` from the
+Arduino IDE menu. Call it `tea-light`.
+
 Now from your project choose `Sketch -> Add File ...` from the menu, and
 navigate to the `BlinkM-Examples` directory you just checked out and choose the
 file `arduino/BlinkMTester/BlinkM_funcs.h`.
 
-In the `tea-light` tab, copy and paste the code from the `demo.c` file.
+Back in the IDE, click the `tea-light` tab, then copy and paste the code in the
+`demo.c` file in the `tea-light` directory you checked out earlier.
 
 Now you can click the tick button on the left of the menu to check your code.
 
 If everything passes, plug your Arduino into the computer via the USB cable.
-Tell the Arduino IDE which port the Arduino is on by selecting the correct
-option from the `Tools -> Port ->` sub-menu.
 
-Now you can press the arrow next to the tick button to deploy the built code to
-your Arduino.
+Next you'll need to tell the Arduino IDE which port the Arduino is on. You can
+do this by selecting the correct option from the `Tools -> Port ->` sub-menu.
+
+Now you can press the `Upload` arrow (next to the tick button you just clicked
+in the toolbar) to deploy the built code to your Arduino.
 
 You should see the tea-light start red, and change colour every few minutes.
 The demo isn't really random, and might show the same sequence each time
