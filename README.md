@@ -98,9 +98,10 @@ GOPATH=$PWD go run caniturniton.go
 
 ## Unexpected press coverage and citations:
 
-- [Are Smart Gadgets Making us Dumb?](http://www.wsj.com/articles/SB10001424127887324503204578318462215991802) - Evgeny Morozov, the Wall Street Journal 
+- [Are Smart Gadgets Making us Dumb?](http://www.wsj.com/articles/SB10001424127887324503204578318462215991802) - Evgeny Morozov, the Wall Street Journal, 2013
 - [The costs of public involvement: everyday devices of carbon accounting and the materialization of participation](http://www.tandfonline.com/doi/pdf/10.1080/03085147.2011.602294) - Noortje Marres, Economy and Society,  Volume 40, Issue 4, 2011
 - [Material Participation: Technology, the Environment and Everyday Publics](http://www.palgrave.com/us/book/9780230232112) - Noortje Marres, 2012
+- [Glowing Teapots](https://studyingscicomm.wordpress.com/2014/01/22/glowing-teapots) - Studying Science Communication, 2014
 
 ## License
 
