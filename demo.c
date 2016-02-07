@@ -13,10 +13,13 @@ void loop()
 {
   int a = random(0, 100);
   if (a <= 50) {
-  // set blinkms with hue & bri, saturation is max
+  // show light as red
     BlinkM_fadeToRGB( blinkm_addr, 255, 0, 0 );
   } else {
+    // show light as green
     BlinkM_fadeToRGB( blinkm_addr, 0, 255, 0 );
   }
-  delay(random(50000, 150000));  // wait a bit because we don't need to go fast
+  // wait between 50 and 150 seconds to change between colours:
+  // (i.e. 50 * 1000 and 150 * 1000 milliseconds )
+  delay(random(50000, 150000));  
 } 
