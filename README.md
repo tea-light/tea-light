@@ -69,6 +69,11 @@ You should see the tea-light start red, and change colour every few minutes.
 The demo isn't really random, and might show the same sequence each time
 you turn it on.
 
+## TODO
+
+- Make it work again with the caniturniton API
+- Deploy caniturniton.go somewhere
+- Maybe document this on http://fritzing.org (to the extent that there is anything stuff to document…)
 
 ## Unexpected press coverage and citations:
 
