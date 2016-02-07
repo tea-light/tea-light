@@ -69,10 +69,31 @@ You should see the tea-light start red, and change colour every few minutes.
 The demo isn't really random, and might show the same sequence each time
 you turn it on.
 
+## Server
+
+If you have the Go programming language you can build a simple proxy server
+that will parse data from a chart provided by the National Grid and return
+`yes` or `no` to the answer Can I Turn It On?
+
+A real version of this should cache responses for 60 seconds to avoid making
+too many requests to the National Grid's server.
+
+Setup:
+
+~~~
+GOPATH=$PWD go get golang.org/x/net/html
+~~~
+
+Run:
+
+~~~
+GOPATH=$PWD go run caniturniton.go
+~~~
+
 ## TODO
 
 - Make it work again with the caniturniton API
-- Deploy caniturniton.go somewhere
+- Deploy `caniturniton.go` somewhere
 - Maybe document this on http://fritzing.org (to the extent that there is anything stuff to document…)
 
 ## Unexpected press coverage and citations:
@@ -80,4 +101,15 @@ you turn it on.
 - [Are Smart Gadgets Making us Dumb?](http://www.wsj.com/articles/SB10001424127887324503204578318462215991802) - Evgeny Morozov, the Wall Street Journal 
 - [The costs of public involvement: everyday devices of carbon accounting and the materialization of participation](http://www.tandfonline.com/doi/pdf/10.1080/03085147.2011.602294) - Noortje Marres, Economy and Society,  Volume 40, Issue 4, 2011
 - [Material Participation: Technology, the Environment and Everyday Publics](http://www.palgrave.com/us/book/9780230232112) - Noortje Marres, 2012
+
+## License
+
+The MIT License (MIT)
+Copyright (c) 2009 Chris Adams and James Gardner
+
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 
