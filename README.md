@@ -68,3 +68,11 @@ in the toolbar) to deploy the built code to your Arduino.
 You should see the tea-light start red, and change colour every few minutes.
 The demo isn't really random, and might show the same sequence each time
 you turn it on.
+
+
+## Unexpected press coverage and citations:
+
+- [Are Smart Gadgets Making us Dumb?](http://www.wsj.com/articles/SB10001424127887324503204578318462215991802) - Evgeny Morozov, the Wall Street Journal 
+- [The costs of public involvement: everyday devices of carbon accounting and the materialization of participation](http://www.tandfonline.com/doi/pdf/10.1080/03085147.2011.602294) - Noortje Marres, Economy and Society,  Volume 40, Issue 4, 2011
+- [Material Participation: Technology, the Environment and Everyday Publics](http://www.palgrave.com/us/book/9780230232112) - Noortje Marres, 2012
+
