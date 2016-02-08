@@ -69,7 +69,52 @@ You should see the tea-light start red, and change colour every few minutes.
 The demo isn't really random, and might show the same sequence each time
 you turn it on.
 
-## Server
+## Live Version
+
+The Live version needs the Arduino Ehternet Shield.
+
+### Arduino
+
+Now that you have demo mode working you can try the live version, this is a bit
+more involved though.
+
+Copy the contents of `live.c` into the Arduino IDE in place of the `demo.c`
+code that is there at the moment.
+
+The Arduino needs an IP address and MAC Address. You can generally use the example MAC address in the source code. You'll need to find out your host compter's IP address.
+
+Update this line with your host computer's IP address (this will be your server):
+
+~~~
+IPAddress server(192,168,0,3);
+~~~
+
+And this line later in the file:
+
+~~~
+    client.println("Host: 192.168.0.3");
+~~~
+
+Now you'll need to choose an IP address for the Arduino. If it is on the same
+network as your server, just choose a different last number greater that isn't
+in use. For example:
+
+~~~
+IPAddress ip(192, 168, 0, 177);
+~~~
+
+Now that you'd arduino is set up you'll need to run the server. This is
+described next.
+
+Note, the example assumes the server is port 8081. Change this to 80 for a
+production environment. The HTTP parsing is very basic. It assumes the HTTP
+response will be less than 500 bytes and looks for a sequence of 4 `\r` or `\n`
+characters to mark the end of the HTTP headers. If the next character is `y`
+for `yes` then the light goes green, if it is `n` for `no` it goes red,
+otherwise it is unchanged.
+
+
+### Server
 
 If you have the Go programming language you can build a simple proxy server
 that will parse data from a chart provided by the National Grid and return
@@ -89,6 +134,9 @@ Run:
 ~~~
 GOPATH=$PWD go run caniturniton.go
 ~~~
+
+With the server running, the Arduino should soon be showing red or green.
+
 
 ## TODO
 
